@@ -1,3 +1,5 @@
+package abstractImpl;
+
 public class Triangle extends Shape {
     private double base;
     private double height;

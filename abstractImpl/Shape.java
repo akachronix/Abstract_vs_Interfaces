@@ -1,6 +1,7 @@
+package abstractImpl;
+
 public abstract class Shape {
-    private String name;
-    private String color;
+    private String name, color;
 
     Shape(String name, String color) {
         this.name = name;
