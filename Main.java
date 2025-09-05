@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-public class Main 
+
+public class Main
 {
     public static void main(String[] args) 
     {
@@ -17,8 +18,8 @@ public class Main
             System.out.printf("Perimeter: %.2f\n", shape.perimeter());
             System.out.println("\nDrawing:");
 
-            if (shape instanceof interfaceImpl.Drawable) {
-                ((interfaceImpl.Drawable) shape).draw();
+            if (shape instanceof interfaceImpl.interfaces.Drawable) {
+                ((interfaceImpl.interfaces.Drawable) shape).draw();
             }
 
             System.out.println("-----------------------\n");
