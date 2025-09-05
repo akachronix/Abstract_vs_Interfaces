@@ -1,30 +1,15 @@
 package interfaceImpl;
 
-public class Triangle implements Drawable, Calculable {
-    private String name, color;
+public class Triangle extends Shape implements Drawable, Calculable 
+{
     private double base, height;
 
     public Triangle(String color, double base, double height) {
+        super("Triangle", color);
         this.name = "Triangle";
         this.color = color;
         this.base = base;
         this.height = height;
-    }
-    
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public double getBase() {
@@ -52,15 +37,20 @@ public class Triangle implements Drawable, Calculable {
         return 3 * base;
     }
 
-    public void draw() {
+    @Override
+    public void draw() 
+    {
         int rows = (int) height;
-        for (int i = 1; i <= rows; i++) {
+        for (int i = 1; i <= rows; i++) 
+        {
             for (int j = rows - i; j > 0; j--) {
                 System.out.print(" ");
             }
+            
             for (int k = 1; k <= (2 * i - 1); k++) {
                 System.out.print("*");
             }
+
             System.out.println();
         }
     }

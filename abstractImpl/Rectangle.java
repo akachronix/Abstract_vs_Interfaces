@@ -11,6 +11,24 @@ public class Rectangle extends Shape {
     }
 
     @Override
+    public void draw() 
+    {
+        for (int i = 0; i < width; i++) 
+        {
+            for (int j = 0; j < length; j++) 
+            {
+                if (i == 0 || i == width - 1 || j == 0 || j == length - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            
+            System.out.println();
+        }
+    }
+
+    @Override
     public double area() {
         return length * width;
     }

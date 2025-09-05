@@ -3,17 +3,29 @@ package abstractImpl;
 public class Triangle extends Shape {
     private double base;
     private double height;
-    private double sideA;
-    private double sideB;
-    private double sideC;
 
-    public Triangle(String color, double base, double height, double sideA, double sideB, double sideC) {
+    public Triangle(String color, double base, double height) {
         super("Triangle", color);
         this.base = base;
         this.height = height;
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
+    }
+
+    @Override
+    public void draw() 
+    {
+        int rows = (int) height;
+        for (int i = 1; i <= rows; i++) 
+        {
+            for (int j = rows - i; j > 0; j--) {
+                System.out.print(" ");
+            }
+            
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
     }
 
     @Override
@@ -23,6 +35,6 @@ public class Triangle extends Shape {
 
     @Override
     public double perimeter() {
-        return sideA + sideB + sideC;
+        return 3 * base; // Assuming an equilateral triangle for simplicity
     }
 }

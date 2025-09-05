@@ -1,7 +1,7 @@
-package abstractImpl;
+package interfaceImpl;
 
 public abstract class Shape {
-    private String name, color;
+    protected String name, color;
 
     Shape(String name, String color) {
         this.name = name;
@@ -26,5 +26,4 @@ public abstract class Shape {
 
     public abstract double area();
     public abstract double perimeter();
-    public abstract void draw();
 }
